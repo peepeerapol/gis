@@ -1,0 +1,23 @@
+  <title>Historical PM2.5</title>
+
+{% extends "navbar.html" %}
+
+{% block content %}
+<body>
+    <br>
+    <h1 align = 'center' >- Historical PM2.5 -</h1>
+
+    <form  class="container" action = "{{ url_for('cal_historical')}}" method="POST"  >
+        <div class="col-md-6" >
+          <label for="county" class="form-label">Country</label>
+          <input type="text" class="form-control"  name = "county" id="county" placeholder="Albania" >
+        </div>
+        <br>
+        <div >
+          <button  id='btn_submit' type="submit"  class="btn btn-success"  name="button">Search</button>
+        </div>
+    </form>
+    {{t}}
+
+    
+{% endblock %}   

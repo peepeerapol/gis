@@ -1,0 +1,23 @@
+<title>the city of low income</title>
+
+</style> 
+
+{% extends "navbar.html" %}
+
+{% block content %}
+  <body>
+    <br>
+    <h1 align = 'center' >- Insert year -</h1>
+    <h3 align = 'center' >visualize all the city points which are considered as low income</h3>
+    <br>
+    <form  class="container" action = "{{ url_for('income')}}" method="POST">
+        <div class="col-md-6">
+            <label for="years" class="form-label">year</label>
+            <input type="text" class="form-control" name="years" id="years" placeholder="2021">
+        </div>
+        <br>
+        <button  id='btn_submit' type="submit" class="btn btn-success"  name="button">Search</button>
+    </form>
+
+  </body>
+{% endblock %} 
