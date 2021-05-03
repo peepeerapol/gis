@@ -1,0 +1,22 @@
+<title>the city points of all countries</title>
+
+
+{% extends "navbar.html" %}
+
+{% block content %}
+  <body>
+    <br>
+    <h1 align = 'center' >- Insert year -</h1>
+    <h3 align = 'center' > visualize all the city points of all countries </h3>
+    <br>
+    <form  class="container" action = "{{ url_for('citypoints')}}" method="POST">
+        <div class="col-md-6">
+            <label for="years" class="form-label">year</label>
+            <input type="text" class="form-control" name="years" id="years" placeholder="2021">
+        </div>
+        <br>
+        <button  id='btn_submit' type="submit" class="btn btn-success"  name="button">Search</button>
+    </form>
+
+ 
+{% endblock %} 

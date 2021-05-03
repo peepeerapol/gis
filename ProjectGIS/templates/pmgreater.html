@@ -1,0 +1,21 @@
+<title>Download Data</title>
+{% extends "navbar.html" %}
+
+{% block content %}
+<body>
+
+    
+<h1 align = 'center' >Download Data </h1>
+            <br>
+         <h3>List country and city names whose PM 2.5 values are greater than 50 in 2015</h3>
+           
+              <a href="{{ url_for('cal_pmgreater') }}" class="btn btn-danger btn-xs" onclick="">Download data</a>
+              <br>
+        <br>
+       <h3>Calculate the Average PM2.5 by country</h3>
+            
+
+              <a href="{{ url_for('cal_avg') }}" class="btn btn-danger btn-xs" onclick="">Download data</a>
+
+
+{% endblock %}   

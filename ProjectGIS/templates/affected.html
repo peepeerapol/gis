@@ -1,0 +1,23 @@
+ <title>Total of the PM2.5 affected population</title>
+    
+{% extends "navbar.html" %}
+
+{% block content %}
+<body>
+    <br>
+    <h1 align = 'center' >- Total of the PM2.5 affected population -</h1>
+
+    <form  class="container" action = "{{ url_for('cal_affected')}}" method="POST">
+        <div class="col-md-6">
+          <label for="color_pm25" class="form-label">color of pm25</label>
+          <input type="text" class="form-control" name = "color_pm25" id="color_pm25" placeholder="green">
+        </div>
+        <div class="col-md-6">
+            <label for="years" class="form-label">year</label>
+            <input type="text" class="form-control" name="years"  id="years" placeholder="2021">
+        </div>
+        <br>
+        <button  id='btn_submit' type="submit" class="btn btn-success"  name="button">Search</button>
+    </form>
+    {{t}} 
+{% endblock %}   
